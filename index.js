@@ -8,9 +8,9 @@ const browser = await puppeteer.launch({
 async function runVotes() {
   for (let i = 0; i < 25; i++) {
     const page = await browser.newPage();
-    await page.goto(`https://poll.fm/POLL_ID/`);
+    await page.goto(`https://poll.fm/13491403/`);
     await page.evaluate(() => {
-      document.querySelector("#PDI_answerANSWER_CHOICE").click();
+      document.querySelector("#PDI_answer60336014").click();
       document.querySelector(".pds-vote-button").click();
     });
     await page.close();
